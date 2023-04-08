@@ -1,0 +1,9 @@
+.carta{
+    background-image: linear-gradient(to bottom, #bb0f0f, #0d2e70);
+    /* background-color: rgb(102, 146, 191); */
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px ;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(237, 235, 235, 0.221);
+}

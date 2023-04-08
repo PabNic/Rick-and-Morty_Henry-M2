@@ -1,9 +1,12 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import "./Cards.css"
+ 
+
 
 export default function Cards({characters, onClose}) {
      return (
 
-      <div>
+      <div className='contenedor'>
          {characters.map(({id, name, status, species, gender, origin, image}) => (
             <Card 
                key={id}
@@ -15,6 +18,7 @@ export default function Cards({characters, onClose}) {
                gender={gender}
                origin={origin.name}
                onClose={onClose}
+               
                />
                ))}
       </div>
