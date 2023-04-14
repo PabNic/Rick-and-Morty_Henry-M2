@@ -1,0 +1,91 @@
+.favButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  box-shadow: 2.5px 5px 20px rgba(0, 0, 0, 1);
+}
+
+.favButton:hover {
+  background-color: #03ecd9;
+}
+
+.closeButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid black;
+  backdrop-filter: blur(15px);
+  box-shadow: 2.5px 5px 20px rgba(0, 0, 0, 1);
+  border: none;
+}
+
+
+.closeButton:hover {
+  background-color: #03ecd9;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.topCard{
+  justify-content: space-between;
+}
+
+.container .card {
+  width: 300px;
+  height: 590px;
+  margin: 10px;
+  box-shadow: 20px 20px 50px rgba(27, 31, 84, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+.container .card .content {
+  padding: 30px;
+}
+.detailButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid black;
+  backdrop-filter: blur(15px);
+  box-shadow: 2.5px 5px 20px rgba(0, 0, 0, 1);
+  border: none;
+}
+
+.detailButton:hover {
+  background-color: #03ecd9;
+}
+
+.nombre{
+  color: #0d2e70;
+}
+
+.especie{
+  color: #0d4570;
+}
+
+.estado{
+  color: #265778;
+}

@@ -1,0 +1,59 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: none;
+  background-image: linear-gradient(to left, #787b9b, #0b1935);
+ 
+}
+
+
+
+/* .navbar {
+  background-color: #333333;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(95, 80, 80, 0.1);
+  backdrop-filter: blur(20px);
+} */
+
+.boton {
+  /* background-image: linear-gradient(to left, #0077cc, #0d2e70) ;  */
+  background-color: blue;
+  border: none; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.boton:hover {
+  background-color: #d83dff; 
+}
+
+.miLink{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head{
+  font-size: 4em;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari */
+  color: transparent;
+  animation: moveGradient 10s linear infinite;
+}
+
+/* @keyframes moveGradient {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 0; }
+} */

@@ -1,0 +1,29 @@
+.buscador {
+  background-color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0;
+  padding: 12px;
+}
+
+
+
+.button {
+  /* background-image: linear-gradient(to left, #0d2e70, #0077cc);  */
+  background-color: blue;
+  border: none; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+  background-color: #d83dff; /* cambiamos el color de fondo cuando se hace hover */
+}

@@ -1,0 +1,65 @@
+
+
+
+
+
+.buscador {
+  background-color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0;
+  padding: 12px;
+}
+
+.boton {
+  background-color: #0077cc; 
+  border: 1px solid black; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; /* eliminamos la subrayado del texto */
+  display: inline-block; /* hacemos que el botón se comporte como un elemento en línea */
+  font-size: 16px; /* tamaño de fuente del texto */
+  border-radius: 10px; /* redondeamos las esquinas */
+  cursor: pointer; /* cambiamos el cursor a una mano cuando se hace hover */
+  transition: background-color 0.3s ease; /* agregamos una transición suave al color de fondo */
+}
+
+.boton:hover {
+  background-color: #714797; /* cambiamos el color de fondo cuando se hace hover */
+}
+
+/* .label {
+  color: white;
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5px;
+} */
+.label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.label::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
+.msgError{
+    color: #ffffff8a;
+}
+.portada{
+    background-color: rgb(17, 15, 32) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
