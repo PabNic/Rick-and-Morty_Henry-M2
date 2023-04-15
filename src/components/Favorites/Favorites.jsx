@@ -46,7 +46,7 @@ const Favorites = () => {
             return (
               <Card
                 id={id}
-                key={name}
+                key={id}
                 name={name}
                 species={species}
                 gender={gender}

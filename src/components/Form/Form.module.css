@@ -1,5 +1,40 @@
+/* .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: ;
+}
+.header {
+  position:  fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
 
-
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .form-box{
+  width: 100%;
+  padding: 40px;
+} */
 
 
 
@@ -18,24 +53,19 @@
   color: white; 
   padding: 10px 20px; 
   text-align: center; 
-  text-decoration: none; /* eliminamos la subrayado del texto */
-  display: inline-block; /* hacemos que el botón se comporte como un elemento en línea */
-  font-size: 16px; /* tamaño de fuente del texto */
-  border-radius: 10px; /* redondeamos las esquinas */
-  cursor: pointer; /* cambiamos el cursor a una mano cuando se hace hover */
-  transition: background-color 0.3s ease; /* agregamos una transición suave al color de fondo */
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  border-radius: 10px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .boton:hover {
-  background-color: #714797; /* cambiamos el color de fondo cuando se hace hover */
+  background-color: #714797;
 }
 
-/* .label {
-  color: white;
-  background-color: blue;
-  padding: 5px;
-  border-radius: 5px;
-} */
+
 .label {
   display: inline-block;
   margin-bottom: 10px;

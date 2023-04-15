@@ -7,9 +7,9 @@
   color: #333;
 }
 .select {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; */
   padding: 10px;
   /* background: url("flecha.png") no-repeat center right; */
   border: 1px solid #ccc;
