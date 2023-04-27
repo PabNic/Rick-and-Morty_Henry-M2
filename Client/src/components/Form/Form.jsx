@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import validation from "./validation";
 import style from "./Form.module.css";
+import { Alert, Button } from "@mui/material";
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -59,6 +60,10 @@ const Form = ({ login }) => {
       <button className={style.boton} type="submit">
         Login
       </button>
+      <Button variant="outlined" color="success">
+        Success
+      </Button>
+      <Alert severity="warning">This is a warning alert — check it out!</Alert>
     </form>
   );
 };

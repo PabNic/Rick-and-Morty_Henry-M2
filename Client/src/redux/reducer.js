@@ -1,8 +1,8 @@
-import { REMOVE_FAV, ADD_FAV, FILTER_CARDS, ORDER_CARDS,  } from "./actions";
+import { REMOVE_FAV, ADD_FAV, FILTER_CARDS, ORDER_CARDS } from "./actions";
 
 const initialSate = {
   myFavorites: [],
-  allCharacters: []
+  allCharacters: [],
 };
 
 const rootReducer = (state = initialSate, action) => {
@@ -10,16 +10,13 @@ const rootReducer = (state = initialSate, action) => {
     case ADD_FAV:
       return {
         ...state,
-        myFavorites: [...state.myFavorites, action.payload],
-        allCharacters: [...state.allCharacters, action.payload]
+        myFavorites: action.payload,
+        allCharacters: action.payload,
       };
+
     case REMOVE_FAV:
-      return {
-        ...state,
-        myFavorites: state.myFavorites.filter(
-          (char) => char.id !== action.payload
-        ),
-      };
+      return { ...state, myFavorites: action.payload };
+      
     case FILTER_CARDS:
       const allCharactersCopy = [...state.allCharacters];
       const filteredCharacters = allCharactersCopy.filter(
@@ -32,6 +29,7 @@ const rootReducer = (state = initialSate, action) => {
             ? [...state.allCharacters]
             : filteredCharacters,
       };
+
     case ORDER_CARDS:
       let charactersCopia = [...state.myFavorites];
       if (action.payload === "A") {

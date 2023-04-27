@@ -3,10 +3,15 @@ import Card from "../Card/Card";
 import style from "./Favorites.module.css";
 import { orderCards, filterCards } from "../../redux/actions";
 import { useState } from "react";
+import { removeFav } from "../../redux/actions";
 
 const Favorites = () => {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.myFavorites);
+
+  const handleRemoveFav = (id) => {
+    dispatch(removeFav(id))
+  }
 
   const handleOrder = (event) => {
     dispatch(orderCards(event.target.value));
@@ -17,7 +22,7 @@ const Favorites = () => {
     dispatch(filterCards(event.target.value));
   };
   const [aux, setAux] = useState(false);
-
+console.log(favorites)
   return (
     <div>
       <div className={style.favContainer}>
@@ -41,19 +46,24 @@ const Favorites = () => {
       </div>
 
       <div className={style.favs}>
-        {favorites.map(
-          ({ id, name, status, species, gender, origin, image, onClose }) => {
+        
+        {favorites.length === 0 ?
+        <h1 style={{color:"white"}}>No hay favoritos</h1> 
+        :
+        favorites.map(
+          (fav, i) => {
             return (
+
               <Card
-                id={id}
-                key={id}
-                name={name}
-                species={species}
-                gender={gender}
-                origin={origin.name}
-                image={image}
-                status={status}
-                onClose={onClose}
+                id={fav.id}
+                key={i}
+                name={fav.name}
+                species={fav.species}
+                gender={fav.gender}
+                origin={fav.origin}
+                image={fav.image}
+                status={fav.status}
+                onClose={handleRemoveFav}
               />
             );
           }

@@ -3,50 +3,31 @@ import style from "./Card.module.css";
 import { connect } from "react-redux";
 import { addFav, removeFav } from "../../redux/actions";
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-function Card({
-  id,
-  name,
-  status,
-  species,
-  gender,
-  origin,
-  image,
-  onClose,
-  addFav,
-  removeFav,
-  myFavorites,
-}) {
+const Card =(props) => {
   const [isFav, setIsFav] = useState(false);
+  const myFavorites = useSelector(state => state.myFavorites)
+  const dispatch = useDispatch()
+
   const handleFavorite = () => {
     if (isFav) {
       setIsFav(false);
-      removeFav(id);
+      dispatch(removeFav(props.id));
     } else {
       setIsFav(true);
-      addFav({
-        id,
-        name,
-        status,
-        species,
-        gender,
-        origin,
-        image,
-        onClose,
-        addFav,
-        removeFav,
-        myFavorites,
-      });
+      console.log(props)
+      dispatch(addFav(props));
     }
   };
 
   useEffect(() => {
     myFavorites.forEach((fav) => {
-      if (fav.id === id) {
+      if (fav.id === props.id) {
         setIsFav(true);
       }
     });
-  }, [myFavorites, id]);
+  }, [myFavorites, props.id]);
 
   return (
     <div className={style.container}>
@@ -57,16 +38,16 @@ function Card({
               {isFav ? "❤️" : "🤍"}{" "}
             </button>
 
-            <button className={style.closeButton} onClick={() => onClose(id)}>
+            <button className={style.closeButton} onClick={() => props.onClose(props.id)}>
               X
             </button>
           </div>
 
-          <h3 className={style.nombre}>{name}</h3>
-          <h4 className={style.especie}>{species}</h4>
-          <h4 className={style.estado}>{status}</h4>
-          <img src={image} alt="Imagen" />
-          <Link to={`/detail/${id}`}>
+          <h3 className={style.nombre}>{props.name}</h3>
+          <h4 className={style.especie}>{props.species}</h4>
+          <h4 className={style.estado}>{props.status}</h4>
+          <img src={props.image} alt="Imagen" />
+          <Link to={`/detail/${props.id}`}>
             <button className={style.detailButton}>Detail</button>
           </Link>
         </div>
